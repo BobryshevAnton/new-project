@@ -1,0 +1,88 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.pagination-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  height: 40px;
+
+  margin-left: 2px;
+  margin-right: 2px;
+  background-color: #ffffff;
+  border-radius: 5px;
+
+  @include mq(tablet) {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+.block:hover,
+.block:focus {
+  background-color: #ff6b08;
+  color: #ffffff;
+}
+
+.pagination-number {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+
+  min-width: 40px;
+  height: 40px;
+  color: #000000;
+}
+
+.block-point {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  color: #000000;
+}
+.current-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 40px;
+  height: 40px;
+  margin-left: 3px;
+  margin-right: 3px;
+  color: #ffffff;
+  border-radius: 5px;
+  background-color: #ff6b08;
+
+  @include mq(tablet) {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+.current-block:hover,
+.current-block:focus {
+  color: #000000;
+  background-color: #f97a25;
+}
+.block-point {
+  display: none;
+  @include mq(tablet) {
+    display: flex;
+  }
+}
+.pagination-arrow {
+  min-width: 40px;
+  height: 40px;
+}

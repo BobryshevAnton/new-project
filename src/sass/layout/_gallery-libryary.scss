@@ -1,0 +1,45 @@
+.header__btn-libryary {
+  background-color: #ff6b0100;
+  border-radius: 5px;
+  padding-left: 42px;
+  padding-right: 42px;
+  padding-top: 14px;
+  padding-bottom: 12px;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  text-transform: uppercase;
+  border: 2px solid #ffffff;
+  margin-left: 20px;
+
+  @include mq(tablet) {
+    margin-left: 32px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  @include mq(desktop) {
+    margin-left: 19px;
+    padding-left: 42px;
+    padding-right: 42px;
+
+    padding-top: 14px;
+    padding-bottom: 12px;
+  }
+}
+.header__btn-libryary:first-child {
+  margin-left: 0px;
+}
+
+.header__btn-libryary:hover,
+.header__btn-libryary:focus {
+  background-color: #ff6b01;
+  border: 2px solid #ff6b01;
+}
+.active {
+  background-color: #ff6b01;
+  border: 2px solid #ff6b01;
+}

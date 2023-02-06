@@ -1,0 +1,33 @@
+.footer-section {
+  background-color: #f7f7f7;
+}
+.footer-conteiner {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+
+  color: #545454;
+  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include mq(tablet) {
+    display: flex;
+
+    font-size: 16px;
+    line-height: 1.18;
+  }
+}
+.footer-title__dev {
+  margin-left: 5px;
+}
+.footer-title {
+  margin-left: 30px;
+}

@@ -1,0 +1,244 @@
+/*МОДАЛЬНОЕ ОКНО-*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition-property: transform, opacity;
+  transition-duration: 2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0);
+}
+
+.modal {
+  width: 280px;
+
+  content: '';
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include mq(tablet) {
+    width: 704px;
+    flex-direction: row;
+  }
+  @include mq(desktop) {
+    width: 806px;
+  }
+}
+.modal-info {
+  width: 240px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+
+  color: #8c8c8c;
+
+  @include mq(tablet) {
+    width: 264px;
+    margin-left: 68px;
+  }
+  @include mq(desktop) {
+    width: 391px;
+    margin-left: 16px;
+  }
+}
+.modal-block {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  align-items: center;
+  @include mq(tablet) {
+    padding-left: 36px;
+    padding-right: 36px;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  @include mq(desktop) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+.modal-pictures {
+  max-width: 240px;
+  @include mq(tablet) {
+    max-width: 264px;
+  }
+  @include mq(desktop) {
+    max-width: 375px;
+  }
+}
+table td {
+  padding-right: 41px;
+}
+.modal-btn {
+  background-color: #ffffff;
+  border: 1.5px solid #505050;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  text-transform: uppercase;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-title {
+  font-family: 'Roboto';
+  font-weight: 500;
+
+  font-size: 20px;
+  line-height: 1.15;
+  margin-top: 20px;
+  @include mq(tablet) {
+    max-width: 264px;
+    margin-top: 0px;
+  }
+  @include mq(desktop) {
+    max-width: 391px;
+    font-size: 30px;
+    line-height: 1.16;
+  }
+}
+
+table td {
+  padding-right: 41px;
+  @include mq(tablet) {
+    padding-right: 51px;
+  }
+  @include mq(desktop) {
+    padding-right: 85px;
+  }
+}
+
+.modal-info__film {
+  font-size: 12px;
+  line-height: 1.33;
+
+  color: #8c8c8c;
+  margin-top: 20px;
+}
+
+.modal-info__right {
+  font-family: 'Roboto';
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+
+  color: #000000;
+}
+
+.modal-bottom__title {
+  font-family: 'Roboto';
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+
+  text-transform: uppercase;
+
+  color: #000000;
+  margin-top: 12px;
+  margin-bottom: 8px;
+
+  @include mq(desktop) {
+    margin-top: 20px;
+  }
+}
+
+.modal-bottom__text {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+  color: #000000;
+  margin-top: 8px;
+}
+.modal-button__section {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 8px;
+  @include mq(tablet) {
+    margin-left: 0px;
+  }
+}
+.modal__btn-libryary {
+  background-color: #ff6b01;
+  border-radius: 5px;
+  padding-left: 27px;
+  padding-right: 27px;
+  padding-top: 14px;
+  padding-bottom: 12px;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  text-transform: uppercase;
+  border: 2px solid #ff6b01;
+  margin-right: 16px;
+
+  @include mq(tablet) {
+    box-sizing: content-box;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+}
+.modal__btn-libryary:last-child {
+  margin-right: 0px;
+}
+.modal__btn-libryary:hover,
+.modal__btn-libryary:focus {
+  background-color: #fbfbfb;
+  border: 1px solid #000000;
+  color: #000000;
+}
+.modal-span {
+  background-color: #ff6b01;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-radius: 5px;
+  margin-right: 2px;
+  color: #ffffff;
+}
